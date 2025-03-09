@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
   }
 
-.body {
-  background-color: #FFFFFF;
-  font-family: 'Raleway', Arial, sans-serif;
-}
 .header {
   padding: 93px 50px 95px;
   font-size: 18px;
@@ -30,6 +26,7 @@ html {
 .header_list-item-no-bullit {
   list-style: none;
 }
+
 .header_links-list-item-no-bullit {
   text-decoration: none;
 }
@@ -41,6 +38,9 @@ html {
 .dark-logo {
   display: block;
   justify-self: center;
+  align-self: center;
+  width: 148px;
+  height: 105px;
 }
 
 .dark-logo-img {
@@ -50,31 +50,30 @@ html {
 
 .address {
   font-style: normal;
-
 }
+
 .header_address {
   max-width: 240px;
   justify-self: end;
-  line-height: 24.3px;
+  line-height: 24px;
 }
 
 .cover_content-section {
   padding: 165px 50px 50px;
-  background-image: url('/images/cover.jpg');
+  background-image: url('../images/cover.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position:relative;
-  max-height: 757px;
+  min-height: 757px;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -89,7 +88,7 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 19px;
+  gap: 20px;
   margin-bottom: 106px;
 }
 
@@ -110,21 +109,21 @@ html {
 }
 
 .cover_text-end {
-    display: block;
-    align-self: end;
-    text-align: right;
+  display: block;
+  align-self: end;
+  text-align: right;
 }
 
 .last-letter {
-    letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 .cover_footer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-items: stretch;
-    gap: 107px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: stretch;
+  gap: 107px;
 }
 
 .cover_description {
@@ -158,6 +157,8 @@ html {
 
 .lots_content-section {
   margin: 180px 24px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .lots_header {
@@ -178,13 +179,12 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none;
   gap: 25px;
   margin-bottom: 30px;
 }
 
-.lots_card {
+.card {
   position: relative;
   min-height: 596px;
   width: 334px;
@@ -193,35 +193,45 @@ html {
   justify-content: space-between;
   padding: 48px 40px;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
+.card_link {
+  text-decoration: none;
+  display: block;
+}
+
 .card-title {
+  position: relative;
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
+  text-decoration: underline;
   color: #FFFFFF;
   z-index: 2;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 .card-text {
+  position: relative;
   font-size: 20px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #FFFFFF;
   z-index: 2;
 }
 
 .card-type-film {
-  background-image: url('/images/card-lot-01.jpg');
+  background-image: url('../images/card-lot-01.jpg');
 }
 
 .card-type-book {
-  background-image: url('/images/card-lot-02.jpg');
+  background-image: url('../images/card-lot-02.jpg');
 }
 
 .card-type-picture {
-  background-image: url('/images/card-lot-03.jpg');
+  background-image: url('../images/card-lot-03.jpg');
 }
 
 .see-more {
@@ -236,14 +246,12 @@ html {
   margin: 120px 24px 180px;
   display: grid;
   grid-template-columns: 240px 693px;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto auto;
   grid-template-areas:
   "logo about"
-  ". about"
   ". about";
-  align-items: center;
+  align-items: start;
   gap: 72px;
-  height: 595px;
   padding-left: 47px;
 }
 
@@ -294,12 +302,12 @@ html {
 }
 
 .about_paragraph {
-  margin-bottom: 24px;
   max-width: 688px;
+  margin-bottom: 24px;
 }
 
-.about_last-paragraph {
-  max-width: 693px;
+.last-paragraph {
+  margin-bottom: 0;
 }
 
 .footer {
@@ -329,8 +337,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  width: 164px;
-  line-height: 22px;
+  line-height: 21px;
 }
 
 .footer_list-item {
@@ -346,6 +353,7 @@ html {
 }
 
 .footer_social-list {
+  list-style: none;
   grid-area: social;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
